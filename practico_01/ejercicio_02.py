@@ -7,7 +7,13 @@ def maximo_encadenado(a: float, b: float, c: float) -> float:
     Restricción: Utilizar UNICAMENTE tres IFs y comparaciones encadenadas.
     Referencia: https://docs.python.org/3/reference/expressions.html#comparisons
     """
-    pass # Completar
+    if b < a > c:
+        print ("el numero mayor es el primer numero. numero: ", a)
+    elif a < b > c:
+        print ("el numero mayor es el segundo numero. numero:", b)    
+    elif a < c > b :
+        print ("el numero mayor es el tercer numero. numero:", c)    
+        
 
 
 # NO MODIFICAR - INICIO
