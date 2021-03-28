@@ -6,11 +6,11 @@ def maximo_encadenado(a: float, b: float, c: float) -> float:
     Restricción: Utilizar UNICAMENTE tres IFs y comparaciones encadenadas.
     Referencia: https://docs.python.org/3/reference/expressions.html#comparisons
     """
-    if a>b and a>c:
+    if b < a > c:
         return a
-    elif b>c:
+    if b>c:
         return b
-    else: return c
+    return c
 
 
 
@@ -45,8 +45,7 @@ def maximo_arbitrario(*args) -> float:
     """Re-escribir para que tome una cantidad arbitraria de parámetros.
     Referencia: https://docs.python.org/3/tutorial/controlflow.html#arbitrary-argument-lists
     """
-    pass # Completar
-
+    return max(args)
 
 # NO MODIFICAR - INICIO
 assert maximo_arbitrario(1, 10, 5, -5) == 10
@@ -62,6 +61,13 @@ assert maximo_arbitrario(24, 9, 18, 30) == 30
 def maximo_recursivo(*args) -> float:
     """Re-Escribir de forma recursiva."""
     pass # Completar
+    if len(args) == 2:
+        a,b=args
+        return a if a>b else b
+    if len(args) > 2:
+        primero, *resto = args
+        resto = maximo_recursivo (*resto)
+        return maximo_recursivo (primero, resto)
 
 
 # NO MODIFICAR - INICIO
