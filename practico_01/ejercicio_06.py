@@ -7,8 +7,8 @@ def numeros_al_final_basico(lista: List[Union[float, str]]) -> List[Union[float,
     """Toma una lista de enteros y strings y devuelve una lista con todos los
     elementos numéricos al final.
     """
-    list1=[]
-    list2=[]
+    list1 = []
+    list2 = []
     for i in range(len(lista)):
         if str(lista[i]).isdigit() is True:
             list1.append(lista[i])
@@ -28,8 +28,8 @@ assert numeros_al_final_basico([3, "a", 1, "b", 10, "j"]) == ["a", "b", "j", 3, 
 def numeros_al_final_comprension(lista: List[Union[float, str]]) -> List[Union[float, str]]:
     """Re-escribir utilizando comprensión de listas."""
     
-    list1=[numero for numero in lista if str(numero).isdigit() is True]
-    list2=[letra for letra in lista if str(letra).isdigit() is not True]
+    list1 = [numero for numero in lista if str(numero).isdigit() is True]
+    list2 = [letra for letra in lista if str(letra).isdigit() is not True]
     return list2+list1
 
 
@@ -46,8 +46,7 @@ def numeros_al_final_sorted(lista: List[Union[float, str]]) -> List[Union[float,
     """Re-escribir utilizando la función sorted con una custom key.
     Referencia: https://docs.python.org/3/library/functions.html#sorted
     """
-    list1=sorted(lista)
-    print(list1)
+    return sorted(lista, key = lambda x: type(x) == int)
 
 
 # NO MODIFICAR - INICIO
@@ -62,7 +61,9 @@ def numeros_al_final_filter(lista: List[Union[float, str]]) -> List[Union[float,
     """CHALLENGE OPCIONAL - Re-escribir utilizando la función filter.
     Referencia: https://docs.python.org/3/library/functions.html#filter
     """
-    pass # Completar
+    list1 = list(filter(lambda x: type(x) == str, lista))
+    list2 = list(filter(lambda x: type(x) == int, lista))
+    return list1+list2
 
 
 # NO MODIFICAR - INICIO
