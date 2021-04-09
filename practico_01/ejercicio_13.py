@@ -51,12 +51,10 @@ def generar_pares_generator(initial: int = 0) -> Iterator[int]:
     """Re-Escribir utilizando Generadores
     Referencia: https://docs.python.org/3/howto/functional.html?highlight=generator#generators
     """
-    def pares():
-        nonlocal initial
-        while True:
-            yield initial
-            initial += 2
-    return pares()
+    while True:
+        yield initial
+        initial += 2
+
 
 
 # NO MODIFICAR - INICIO
@@ -72,8 +70,12 @@ assert next(generador_pares) == 4
 
 def generar_pares_generator_send(initial: int = 0) -> Iterator[int]:
     """CHALLENGE OPCIONAL: Re-Escribir utilizando send para saltear numeros"""
-    pass # Completar
-
+    while True:
+        x = yield initial
+        if x is not None:
+            initial = x
+        else: 
+            initial += 2
 
 
 # NO MODIFICAR - INICIO
@@ -94,8 +96,7 @@ if __name__ == "__main__":
 
 def generar_pares_delegados(initial: int = 0) -> Iterator[int]:
     """CHALLENGE OPCIONAL: Re-Escribir utilizando Generadores delegados (yield from)"""
-    pass # Completar
-
+    yield from generar_pares_generator_send(initial)
 
 # NO MODIFICAR - INICIO
 if __name__ == "__main__":
