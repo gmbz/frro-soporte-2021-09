@@ -34,7 +34,7 @@ Referencia: https://docs.python.org/3/library/functools.html#functools.partial
 lista = [3, 4, 5, 6, 7, 8]
 min_ = 4
 max_ = 7
-nueva_funcion = partial(esta_entre_valores, [x for x in lista], min_=min_, max_=max_)
+nueva_funcion = # Completar
 
 # NO MODIFICAR - INICIO
 lista = [3, 4, 5, 6, 7, 8]
