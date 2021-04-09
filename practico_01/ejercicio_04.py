@@ -9,14 +9,15 @@ def es_vocal_if(letra: str) -> bool:
     """
     if letra.lower()=='a':
         return True
-    elif letra.lower()=='e':
+    if letra.lower()=='e':
         return True
-    elif letra.lower()=='i':
+    if letra.lower()=='i':
         return True
-    elif letra.lower()=='o':
+    if letra.lower()=='o':
         return True
-    elif letra.lower()=='u':
+    if letra.lower()=='u':
         return True
+    return False
 
         
 
@@ -37,6 +38,7 @@ def es_vocal_if_in(letra: str) -> bool:
     """
     if letra.lower() in "aeiou":
         return True
+    return False
 
 
 # NO MODIFICAR - INICIO

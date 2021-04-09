@@ -11,9 +11,9 @@ def multiplicar_basico(numeros: Iterable[float]) -> float:
     if numeros!=[]:
         acu=1
         for valor in numeros:
-            acu=acu*valor
+            acu *= valor
         return acu
-    else: return 0
+    return 0
 
 
 # NO MODIFICAR - INICIO
@@ -35,10 +35,10 @@ def multiplicar_reduce(numeros: Iterable[float]) -> float:
     """CHALLENGE OPCIONAL - Re-escribir utilizando reduce.
     Referencia: https://docs.python.org/3.8/library/functools.html#functools.reduce
     """
-    if numeros!=[]:
-        prod=reduce(lambda x,y: x*y, numeros)
+    if numeros != []:
+        prod = reduce(lambda x,y: x*y, numeros)
         return prod
-    else: return 0
+    return 0
 
 # NO MODIFICAR - INICIO
 if __name__ == "__main__":
