@@ -12,11 +12,12 @@ def suma_cubo_pares_for(numeros: Iterable[int]) -> int:
     """
 <<<<<<< Updated upstream
     cubo = []
-    pares = []
     for i in numeros:
         cubo.append(i**3)
+    pares = 0
     for i in cubo:
         if i % 2 == 0:
+<<<<<<< HEAD
             pares.append(i)
     return sum(pares)
 =======
@@ -32,6 +33,10 @@ def suma_cubo_pares_for(numeros: Iterable[int]) -> int:
 
     
 >>>>>>> Stashed changes
+=======
+            pares += i
+    return pares
+>>>>>>> practico-01
 
 
 # NO MODIFICAR - INICIO
@@ -49,8 +54,7 @@ def suma_cubo_pares_sum_list(numeros: Iterable[int]) -> int:
     Referencia: https://docs.python.org/3/tutorial/datastructures.html#list-comprehensions
     Referencia: https://docs.python.org/3/library/functions.html#sum
     """
-    lista = [n**3 for n in numeros if n % 2 == 0]
-    return sum(lista)
+    return sum([n**3 for n in numeros if n % 2 == 0])
 
 
 # NO MODIFICAR - INICIO
@@ -66,8 +70,7 @@ def suma_cubo_pares_sum_gen(numeros: Iterable[int]) -> int:
     y la función sum.
     Referencia: https://docs.python.org/3/reference/expressions.html#generator-expressions
     """
-    gen = (n**3 for n in numeros if n % 2 == 0)
-    return sum(gen)
+    return sum(n**3 for n in numeros if n % 2 == 0)
 
 
 # NO MODIFICAR - INICIO
