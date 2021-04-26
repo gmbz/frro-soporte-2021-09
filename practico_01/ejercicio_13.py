@@ -21,6 +21,7 @@ def generar_pares_clousure(initial: int = 0) -> Callable[[], int]:
         - Usar closures
         - Usar el modificador nonlocal
     """
+<<<<<<< Updated upstream
     def pares():
         nonlocal initial
         if initial % 2 == 0:
@@ -28,8 +29,26 @@ def generar_pares_clousure(initial: int = 0) -> Callable[[], int]:
             initial += 2
             return x
     return pares
+=======
+    """a=0
+    def fn():
+        return a
+    def get_a ():
+        return a
+    def set_a (valor):
+        nonlocal a 
+        if valor %2==0:
+            a = valor +2
+        else:
+            a = valor +1
+    fn.get_a = get_a
+    fn.set_a = set_a
+    return fn"""
+    pass # Completar
+>>>>>>> Stashed changes
 
 
+    
 # NO MODIFICAR - INICIO
 generador_pares = generar_pares_clousure(0)
 assert generador_pares() == 0

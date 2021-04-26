@@ -45,7 +45,18 @@ def maximo_arbitrario(*args) -> float:
     """Re-escribir para que tome una cantidad arbitraria de parámetros.
     Referencia: https://docs.python.org/3/tutorial/controlflow.html#arbitrary-argument-lists
     """
+<<<<<<< Updated upstream
     return max(args)
+=======
+    if len (args)>2:
+        a = args[0]
+        b = maximo_arbitrario(*args[1:])
+        return maximo_arbitrario(a, b)
+    elif len (args)==2:
+        return args
+
+
+>>>>>>> Stashed changes
 
 # NO MODIFICAR - INICIO
 assert maximo_arbitrario(1, 10, 5, -5) == 10
@@ -60,6 +71,7 @@ assert maximo_arbitrario(24, 9, 18, 30) == 30
 
 def maximo_recursivo(*args) -> float:
     """Re-Escribir de forma recursiva."""
+<<<<<<< Updated upstream
     pass # Completar
     if len(args) == 2:
         a,b=args
@@ -68,6 +80,17 @@ def maximo_recursivo(*args) -> float:
         primero, *resto = args
         resto = maximo_recursivo (*resto)
         return maximo_recursivo (primero, resto)
+=======
+    if len(args)>2:
+        primero, *resto = args
+        resto=maximo_recursivo(*resto)
+        return maximo_recursivo(primero, resto)
+    elif len(args)==2:
+        a,b=args
+        return a if a>=b else b
+            
+
+>>>>>>> Stashed changes
 
 
 # NO MODIFICAR - INICIO

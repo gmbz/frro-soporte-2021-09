@@ -17,7 +17,11 @@ class Perro(Animal):
     sobrecargar el método descripción para que devuelva:
     "Soy un perro y" + método descripción del padre
     """
-    # Completar
+class Perro(Animal):
+    raza: str = ""
+
+    def descripcion(self) -> str:
+        return f'Soy un perro y {super().descripcion().lower()}'
 
 
 # NO MODIFICAR - INICIO
