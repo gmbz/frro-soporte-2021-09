@@ -11,7 +11,20 @@ class Auto:
     
     Referencia: https://docs.python.org/3/library/functions.html#property"""
 
-    # Completar
+    def __init__(self, _nombre: str, _precio: float) -> None:
+        self._nombre: str = _nombre
+        self._precio: float = _precio
+
+    @property 
+    def nombre (self) -> str:
+        return self._nombre.capitalize()
+    
+    @property
+    def precio(self) -> float:
+        return round( self._precio, 2)
+    @precio.setter
+    def precio(self, value: float) -> None:
+        self._precio = value
 
 
 # NO MODIFICAR - INICIO
@@ -39,7 +52,20 @@ from dataclasses import dataclass
 class Auto:
     """Re-Escribir utilizando DataClasses"""
 
-    # Completar
+    _nombre: str
+    _precio: float
+
+    @property
+    def nombre(self) -> str:
+        return self._nombre.capitalize()
+
+    @property
+    def precio (self) -> float:
+        return round (self._precio, 2)
+
+    @precio.setter
+    def precio(self, value: float) -> None:
+        self._precio = value
 
 
 # NO MODIFICAR - INICIO
