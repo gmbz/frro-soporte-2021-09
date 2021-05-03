@@ -15,7 +15,7 @@ class Articulo:
     def __init__(self, nombre: str = "") -> None:
         self.nombre: str = nombre
         self.id_: int = self.get_next_id()
-    
+
     @classmethod
     def get_next_id(cls):
         cls._last_id += 1
