@@ -8,7 +8,7 @@ from ejercicio_04 import buscar_persona
 
 
 def agregar_peso(id_persona, fecha, peso):
-    """Implementar la funcion agregar_peso, que inserte un registro en la tabla 
+    """Implementar la funcion agregar_peso, que inserte un registro en la tabla
     PersonaPeso.
 
     Debe validar:
@@ -27,7 +27,7 @@ def agregar_peso(id_persona, fecha, peso):
     if buscar_persona(id_persona) is False:
         con.close()
         return False
-    
+
     sentencia = "SELECT COUNT(*) FROM PersonaPeso WHERE IdPersona = ? AND Fecha >= ?"
     tdatos = (id_persona, fecha)
 
@@ -44,14 +44,18 @@ def agregar_peso(id_persona, fecha, peso):
     return False
 
 # NO MODIFICAR - INICIO
+
+
 @reset_tabla
 def pruebas():
-    id_juan = agregar_persona('juan perez', datetime.datetime(1988, 5, 15), 32165498, 180)
+    id_juan = agregar_persona(
+        'juan perez', datetime.datetime(1988, 5, 15), 32165498, 180)
     assert agregar_peso(id_juan, datetime.datetime(2018, 5, 26), 80) > 0
     # Test Id incorrecto
     assert agregar_peso(200, datetime.datetime(1988, 5, 15), 80) == False
     # Test Registro previo al 2018-05-26
     assert agregar_peso(id_juan, datetime.datetime(2018, 5, 16), 80) == False
+
 
 if __name__ == '__main__':
     pruebas()

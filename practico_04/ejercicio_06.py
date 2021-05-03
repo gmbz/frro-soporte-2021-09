@@ -28,7 +28,7 @@ def borrar_tabla_peso():
     anteriormente."""
     con = sqlite3.connect("mydatabase.db")
     cursor = con.cursor()
-                            
+
     cursor.execute("DROP TABLE IF EXISTS PersonaPeso")
     con.commit()
 

@@ -12,12 +12,13 @@ def borrar_persona(id_persona):
     borro o no."""
     con = sqlite3.connect("mydatabase.db")
     cursor = con.cursor()
-                            
+
     sentencia = "DELETE FROM Persona WHERE IdPersona = ?"
     cursor.execute(sentencia, (id_persona,))
 
     con.commit()
-    filas_afectadas = cursor.rowcount  # rowcount devuelve la cantidad de filas afectadas
+    # rowcount devuelve la cantidad de filas afectadas
+    filas_afectadas = cursor.rowcount
     con.close()
 
     if filas_afectadas == 0:
@@ -25,10 +26,14 @@ def borrar_persona(id_persona):
     return True
 
 # NO MODIFICAR - INICIO
+
+
 @reset_tabla
 def pruebas():
-    assert borrar_persona(agregar_persona('juan perez', datetime.datetime(1988, 5, 15), 32165498, 180))
+    assert borrar_persona(agregar_persona(
+        'juan perez', datetime.datetime(1988, 5, 15), 32165498, 180))
     assert borrar_persona(12345) is False
+
 
 if __name__ == '__main__':
     pruebas()

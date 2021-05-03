@@ -49,7 +49,8 @@ def listar_pesos(id_persona):
 # NO MODIFICAR - INICIO
 @reset_tabla
 def pruebas():
-    id_juan = agregar_persona('juan perez', datetime.datetime(1988, 5, 15), 32165498, 180)
+    id_juan = agregar_persona(
+        'juan perez', datetime.datetime(1988, 5, 15), 32165498, 180)
     agregar_peso(id_juan, datetime.datetime(2018, 5, 1), 80)
     agregar_peso(id_juan, datetime.datetime(2018, 6, 1), 85)
     pesos_juan = listar_pesos(id_juan)
