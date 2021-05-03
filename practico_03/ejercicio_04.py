@@ -2,6 +2,9 @@
 
 
 # NO MODIFICAR - INICIO
+from dataclasses import dataclass
+
+
 class Animal:
     def __init__(self, edad: int = 0):
         self.edad = edad
@@ -16,14 +19,15 @@ class Perro(Animal):
     de tipo string y que tenga como valor por defecto "". Adicionalmente se debe
     sobrecargar el método descripción para que devuelva:
     "Soy un perro y" + método descripción del padre
-    """ 
+    """
+
     def __init__(self, raza: str = "", edad: int = 0) -> None:
         super().__init__(edad)
         self.raza: str = raza
 
-
     def descripcion(self) -> str:
         return f'Soy un perro y {super().descripcion().lower()}'
+
 
 # NO MODIFICAR - INICIO
 terrier = Perro(edad=8, raza="Yorkshire Terrier")
@@ -38,8 +42,6 @@ assert cachorro.descripcion() == "Soy un perro y tengo 1 años"
 
 """Re-Escribir utilizando DataClasses"""
 
-from dataclasses import dataclass
-
 
 @dataclass
 class Animal:
@@ -47,7 +49,6 @@ class Animal:
 
     def descripcion(self) -> str:
         return f"Tengo {self.edad} años"
-
 
 
 @dataclass

@@ -25,7 +25,7 @@ class Article:
 
     def __str__(self) -> str:
         return self.name
-    
+
     def __repr__(self) -> str:
         return f"Article('{self.name}')"
 
@@ -66,10 +66,10 @@ class ShoppingCart:
 
     def __str__(self) -> str:
         return str([str(i) for i in self.articles])
-    
+
     def __repr__(self) -> str:
         return f"ShoppingCart({[art for art in self.articles]})"
-    
+
     def __add__(self, other: ShoppingCart) -> ShoppingCart:
         return ShoppingCart(self.articles + other.articles)
 
