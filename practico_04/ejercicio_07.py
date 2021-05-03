@@ -12,9 +12,9 @@ def agregar_peso(id_persona, fecha, peso):
     PersonaPeso.
 
     Debe validar:
-    - Que el ID de la persona ingresada existe (reutilizando las funciones ya 
+    - Que el ID de la persona ingresada existe (reutilizando las funciones ya
         implementadas).
-    - Que no existe de esa persona un registro de fecha posterior al que 
+    - Que no existe de esa persona un registro de fecha posterior al que
         queremos ingresar.
 
     Debe devolver:
