@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for msg in messages %}
+<div class="alert alert-success" role="alert">
+    {{ msg }}
+</div>
+{% endfor %}
+{% endif %}
+{% endwith %}
+<div class="card">
+    <div class="card-header">
+        <h4>Lista de socios</h4>
+    </div>
+    <div class="card-body">
+        <ul class="list-group">
+            <li class="list-group-item">
+                <table>
+                    <thead>
+                        <tr>
+                            <td>ID</td>
+                            <td>DNI</td>
+                            <td>NOMBRE</td>
+                            <td>APELLIDO</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for socio in socios %}
+                            <tr>
+                                <td>{{ socio.id}}</td>
+                                <td>{{ socio.dni }}</td>
+                                <td>{{ socio.nombre }}</td>
+                                <td>{{ socio.apellido }}</td>
+                                <td>
+                                    <a href="/modificar/{{ socio.dni }}" class="btn btn-success btn-sm">Modificar</a>
+                                    <a href="/delete/{{ socio.id }}" class="btn btn-danger btn-sm">Delete</a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </li>
+        </ul>                     
+    </div>
+</div>
+
+
+{% endblock %}

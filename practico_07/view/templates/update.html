@@ -1,0 +1,25 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<form action="/update/{{ soc.dni }}" method='POST'>
+    <div class="card">
+        <div class="card-header">
+            <h4>Modificar socio</h4>
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <input type="number" name='dni' placeholder="DNI" class="form-control" autofocus, value="{{soc.dni}}">
+                <input type="text" name='nombre' placeholder="NOMBRE" class="form-control" autofocus, value="{{soc.nombre}}">
+                <input type="text" name='apellido' placeholder="APELLIDO" class="form-control" autofocus, value="{{soc.apellido}}">
+            </div>
+            <button type="reset" class="btn btn-danger btn-block">
+                CANCELAR
+            </button>
+            <button type="submit" class="btn btn-primary btn-block">
+                ACEPTAR
+            </button>
+        </div>
+    </div>
+</form>
+
+{% endblock %}

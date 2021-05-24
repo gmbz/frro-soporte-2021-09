@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<form action="/add/" method='POST'>
+    <div class="card">
+        <div class="card-header">
+            Ingresar socio
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <input type="number" name='dni' placeholder="DNI" class="form-control" autofocus>
+                <input type="text" name='nombre' placeholder="NOMBRE" class="form-control" autofocus>
+                <input type="text" name='apellido' placeholder="APELLIDO" class="form-control" autofocus>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">
+                AGREGAR SOCIO
+            </button>
+        </div>
+    </div>
+</form>
+
+{% endblock %}

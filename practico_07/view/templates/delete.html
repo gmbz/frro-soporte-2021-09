@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+{% block body %}
+
+<form action="/delete/" method='POST'>
+    <div class="form-group">
+        <input type="number" name='id' placeholder="ID" class="form-control" autofocus>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">
+        BORRAR SOCIO
+    </button>
+</form>
+
+{% endblock %}
