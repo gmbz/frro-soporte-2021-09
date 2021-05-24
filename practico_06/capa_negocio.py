@@ -58,7 +58,7 @@ class NegocioSocio(object):
         :rtype: bool
         """
         try:
-            if self.regla_1(socio) is True and self.regla_2(socio) is True and self.regla_3 is True:
+            if self.regla_1(socio) is True and self.regla_2(socio) is True and self.regla_3() is True:
                 self.datos.alta(socio)
                 return True
         except DniRepetido as exc:
@@ -87,6 +87,7 @@ class NegocioSocio(object):
         """
         try:
             if self.regla_2(socio) is True:
+                self.datos.modificacion(socio)
                 return True
         except LongitudInvalida as exc:
             return exc
