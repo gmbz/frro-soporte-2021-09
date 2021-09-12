@@ -1,4 +1,3 @@
-from types import MethodDescriptorType
 from flask import Flask, render_template, request, redirect, url_for
 from flask.helpers import flash
 from practico_06.capa_negocio import NegocioSocio
@@ -6,7 +5,7 @@ from practico_05.ejercicio_01 import Socio
 
 # FALTA HACER MEJOR LA BARRA DE NAVEGACION Y HACER LAS ALERTAS DE LAS EXCEPCIONES
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder='view/templates/', static_folder='view/static/')
 
 app.secret_key = 'mysecretkey'
 
