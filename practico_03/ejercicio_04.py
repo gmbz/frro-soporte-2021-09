@@ -40,7 +40,10 @@ assert dogo.descripcion() == "Soy un perro y tengo 0 años"
 assert cachorro.descripcion() == "Soy un perro y tengo 1 años"
 # NO MODIFICAR - FIN
 
+
 """Re-Escribir utilizando DataClasses"""
+
+
 
 
 @dataclass

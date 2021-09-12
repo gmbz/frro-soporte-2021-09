@@ -14,6 +14,9 @@ class Articulo:
 # NO MODIFICAR - FIN
 
 
+
+
+
 def actualizar_precio(articulos: List[Articulo], porcentaje: float) -> List[Articulo]:
     """Toma una lista de articulos y un porcentaje, al precio de cada articulo
     le suma un porcentaje. Devuelve una lista con los precios actualizados.
