@@ -1,6 +1,9 @@
 """Dataclasses"""
 
 
+from dataclasses import dataclass
+
+
 class Persona:
     """Clase con los siguientes miembros:
 
@@ -15,7 +18,16 @@ class Persona:
     - es_mayor_edad(): indica si es mayor de edad, devuelve un booleano.
     """
 
-    # Completar
+    def __init__(self, nombre: str, edad: int, sexo: str,
+                 peso: float, altura: float) -> None:
+        self.nombre: str = nombre
+        self.edad: str = edad
+        self.sexo: str = sexo
+        self.peso: str = peso
+        self.altura: str = altura
+
+    def es_mayor_edad(self) -> bool:
+        return self.edad >= 17
 
 
 # NO MODIFICAR - INICIO
@@ -27,13 +39,20 @@ assert not Persona("Julia", 16, "M", 65, 162.4).es_mayor_edad()
 ###############################################################################
 
 
-from dataclasses import dataclass
+
 
 @dataclass
 class Persona:
     """Re-Escribir utilizando DataClasses"""
 
-    # Completar
+    nombre: str
+    edad: int
+    sexo: str
+    peso: float
+    altura: float
+
+    def es_mayor_edad(self) -> bool:
+        return self.edad >= 17
 
 
 # NO MODIFICAR - INICIO
