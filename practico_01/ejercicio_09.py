@@ -3,6 +3,7 @@
 
 def sumatoria_basico(n: int) -> int:
     """Devuelve la suma de los números de 1 a N.
+
     Restricción: Utilizar un bucle for.
     """
     suma = 0

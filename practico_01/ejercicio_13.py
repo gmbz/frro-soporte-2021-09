@@ -23,10 +23,9 @@ def generar_pares_clousure(initial: int = 0) -> Callable[[], int]:
     """
     def pares():
         nonlocal initial
-        if initial % 2 == 0:
-            x = initial
-            initial += 2
-            return x
+        x = initial
+        initial += 2
+        return x
     return pares
 
 

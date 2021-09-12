@@ -6,6 +6,7 @@ from typing import Iterable
 def multiplicar_basico(numeros: Iterable[float]) -> float:
     """Toma un lista de números y devuelve el producto todos los números. Si
     la lista está vacia debe devolver 0.
+    
     Restricciones: No usar bibliotecas auxiliares (Numpy, math, pandas).
     """
     if numeros!=[]:

@@ -4,6 +4,7 @@
 def es_vocal_if(letra: str) -> bool:
     """Toma un string y devuelve un booleano en base a si letra es una vocal o
     no.
+
     Restricción: Utilizar un if para cada posibilidad con la función lower().
     Referencia: https://docs.python.org/3/library/stdtypes.html#string-methods
     """

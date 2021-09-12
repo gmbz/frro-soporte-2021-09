@@ -3,6 +3,7 @@
 
 def maximo_encadenado(a: float, b: float, c: float) -> float:
     """Toma 3 números y devuelve el máximo.
+
     Restricción: Utilizar UNICAMENTE tres IFs y comparaciones encadenadas.
     Referencia: https://docs.python.org/3/reference/expressions.html#comparisons
     """
@@ -26,6 +27,7 @@ assert maximo_encadenado(24, 9, 18) == 24
 
 def maximo_cuadruple(a: float, b: float, c: float, d: float) -> float:
     """Re-escribir para que tome 4 parámetros, utilizar la función max.
+    
     Referencia: https://docs.python.org/3/library/functions.html#max"""
     return max(a,b,c,d)
 
